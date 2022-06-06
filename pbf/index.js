@@ -46,20 +46,11 @@ const employees = [
         "id": 5
     }
 ]
-//Create an employee array of abjects of 20 datas in it
-for (let i = 6; i < 26; i++) {
-    employee.push({
-        "name": "John"+ i,
-        "age": 3 + i,
-        "salary": 100 + i,
-        "position": "Manager of" + i + "th Department",
-        "id": i
-    })
-}
+
 
 fs.writeFileSync('employee.json', JSON.stringify(employee))
 /**
- * Just for 25 Employees it gives 2.8kb file size
+ * Just for 3 Employees it gives 137kb file size
  * Not much file size but imagine it is used in production having lakhas of employees this will grow large and large
  * So whenever we send this file as http request it will be huge
  * How about we do it with protobuf?
